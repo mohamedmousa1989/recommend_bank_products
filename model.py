@@ -186,13 +186,7 @@ def process_input_data(input_data_dict):
 		return
 
 	x_vars = []
-	# cat_cols = [
-	# 	"pais_residencia", # Customer's Country residence
-	# 	"sexo", # Gender
-	# 	"tiprel_1mes", # Customer relation type
-	# 	"ind_actividad_cliente", # Activity level
-	# 	"segmento" # Segment
-	# ]
+
 	for col in cat_cols:
 		x_vars.append( getIndex(input_data_dict, col) )
 	x_vars.append( getAge(input_data_dict) )

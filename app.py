@@ -4,7 +4,6 @@ import random
 # using flask_restful
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api, reqparse
-from flask_restful import reqparse
 
 
 from model import get_recommended_products
@@ -22,8 +21,6 @@ from utils import (
 app = Flask(__name__)
 # creating an API object
 api = Api(app)
-# getting machine learning model
-model = pickle.load(open('model.pkl','rb'))
 
 
 # making a class for a particular resource
